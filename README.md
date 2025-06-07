@@ -27,7 +27,7 @@ Knight Adventure adalah game 2D RPG top-down berbasis React di mana pemain menje
 ## 🚀 Cara Menjalankan Proyek
 
 ```bash
-cd knight-adventure
+cd folder
 ```
 
 ```bash
@@ -35,7 +35,7 @@ npm install
 ```
 
 ```bash
-npm run dev
+npm run dev/ npm start
 ```
 
 > Pastikan Node.js versi 16+ sudah terinstal.
