@@ -1,38 +1,76 @@
-.App {
-  text-align: center;
+/* Import font (optional) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body,
+html,
+.app-container {
+  width: 100%;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app-container {
+  position: relative;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+
+.map-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.6);
+}
+
+/* Overlay layer */
+.overlay {
+  position: absolute;
+  text-align: center;
   color: white;
+  z-index: 2;
 }
 
-.App-link {
-  color: #61dafb;
+/* Game title */
+.game-title {
+  font-size: 3rem;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Start Button */
+.start-button {
+  padding: 15px 40px;
+  font-size: 1.2rem;
+  background: linear-gradient(135deg, #5865f2, #4752c4);
+  color: white;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 24px rgba(88, 101, 242, 0.4);
+}
+
+.start-button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #6a74ff, #5865f2);
+  box-shadow: 0 10px 28px rgba(88, 101, 242, 0.6);
+}
+
+@media (max-width: 600px) {
+  .game-title {
+    font-size: 2rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  .start-button {
+    padding: 12px 30px;
+    font-size: 1rem;
   }
 }
