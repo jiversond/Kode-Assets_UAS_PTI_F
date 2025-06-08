@@ -1025,10 +1025,10 @@ export default function GameplayPage() {
             >
               ×
             </button>
-            <p>Apakah Anda ingin masuk ke arena gunung? {playerLevel < 1 ? '(Level Up Dulu Bos!)' : ''}</p>
+            <p>Apakah Anda ingin masuk ke arena gunung? {playerLevel < 10 ? '(Level Up Dulu Bos!)' : ''}</p>
             <button
               onClick={() => {
-                if (playerLevel >= 1) {
+                if (playerLevel >= 10) {
                   console.log('Entering Mountain');
                   setIsInMountain(true);
                   setShowMountainModal(false);
@@ -1042,7 +1042,7 @@ export default function GameplayPage() {
                 }
               }}
               className="modal-button"
-              disabled={playerLevel < 1}
+              disabled={playerLevel < 10}
             >
               Ya
             </button>
